@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Luas Wilayah</title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        thead tr {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+        }
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabel Luas Wilayah</h1>
+    <table id="dataTable" class="display">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Wilayah</th>
+                <th>Ibu Kota</th>
+                <th>Provinsi</th>
+                <th>Luas Wilayah (km²)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data dari CSV -->
+            <tr><td>1</td><td>Kota Bandar Lampung</td><td>Tanjung Karang</td><td>Lampung</td><td>169.0</td></tr>
+            <tr><td>2</td><td>Kabupaten Lampung Selatan</td><td>Kalianda</td><td>Lampung</td><td>2109.0</td></tr>
+            <tr><td>3</td><td>Kabupaten Lampung Barat</td><td>Liwa</td><td>Lampung</td><td>2116.0</td></tr>
+            <tr><td>4</td><td>Kabupaten Tanggamus</td><td>Kota Agung</td><td>Lampung</td><td>2901.98</td></tr>
+            <tr><td>5</td><td>Kabupaten Lampung Timur</td><td>Sukadana</td><td>Lampung</td><td>3867.0</td></tr>
+            <tr><td>6</td><td>Kabupaten Lampung Tengah</td><td>Gunung Sugih</td><td>Lampung</td><td>4548.0</td></tr>
+            <tr><td>7</td><td>Kabupaten Lampung Utara</td><td>Kotabumi</td><td>Lampung</td><td>2656.0</td></tr>
+            <tr><td>8</td><td>Kabupaten Way Kanan</td><td>Blambangan Umpu</td><td>Lampung</td><td>3531.0</td></tr>
+            <tr><td>9</td><td>Kabupaten Tulang Bawang</td><td>Menggala</td><td>Lampung</td><td>3107.0</td></tr>
+            <tr><td>10</td><td>Kabupaten Pesawaran</td><td>Gedong Tataan</td><td>Lampung</td><td>1279.0</td></tr>
+            <tr><td>11</td><td>Kabupaten Pringsewu</td><td>Pringsewu</td><td>Lampung</td><td>614.0</td></tr>
+            <tr><td>12</td><td>Kabupaten Mesuji</td><td>Wiralaga Mulya</td><td>Lampung</td><td>2200.0</td></tr>
+            <tr><td>13</td><td>Kabupaten Tulang Bawang Barat</td><td>Panaragan Jaya</td><td>Lampung</td><td>1281.0</td></tr>
+            <tr><td>14</td><td>Kabupaten Pesisir Barat</td><td>Krui</td><td>Lampung</td><td>2993.8</td></tr>
+            <tr><td>15</td><td>Kota Metro</td><td>Metro</td><td>Lampung</td><td>73.0</td></tr>
+            
+            
+        </tbody>
+    </table>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Inisialisasi DataTables
+            $("#dataTable").DataTable({
+                pageLength: 10,
+                responsive: true
+            });
+        });
+    </script>
+</body>
+</html>
